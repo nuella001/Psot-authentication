@@ -10,6 +10,7 @@ The login endpoint takes an email and password as query parameters eg <br />  ht
 
 ### Signup
 The Signup endpoint takes email,password and name as body parameters <br /> 
+https://authenticationpsot.herokuapp.com/api/users <br /> 
 eg <br /> 
 { "name":"Chioma",<br /> 
  "email":"chiomamemmanuella@gmail.com",<br /> 
