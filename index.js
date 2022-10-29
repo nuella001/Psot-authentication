@@ -3,14 +3,13 @@ const express = require('express');
 const cors = require('cors')
 const app = express();
 
-
-
 app.use(
     cors({
         origin:"*"
     })
 )
 app.use(express.json());
+const PORT = process.env.PORT || 5008;
 
 mongoose
     .connect("mongodb+srv://Chioma:737373emmanuella@psot-backend.bggvhhd.mongodb.net/Books",
@@ -50,8 +49,8 @@ const UserModel = mongoose.model('User', userSchema);
 //   Sign up authorization
 app.get('/', (req,res)=>{
     res.send('Hello world')
-
 })
+
 app.post('/api/users', async (req, res) => {
     let name = req.body.name;
     let email = req.body.email;
@@ -95,6 +94,6 @@ app.get('/api/users', async (req, res) => {
 
 })
 
-app.listen(5008, () => {
+app.listen(PORT, () => {
     console.log("Listening on 5008");
 });
