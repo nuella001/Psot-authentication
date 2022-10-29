@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
 const express = require('express');
 const app = express();
+app.use(
+    cors({
+        origin:"*"
+    })
+)
 app.use(express.json());
 
 mongoose
