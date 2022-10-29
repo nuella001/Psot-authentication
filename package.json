@@ -1,0 +1,23 @@
+{
+  "name": "psot-authentication",
+  "version": "1.0.0",
+  "description": "An authentication system for Pink Summer Of Tech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "placeholder"
+  },
+  "keywords": [
+    "Authentication",
+    "node.js"
+  ],
+  "author": "Chioma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.7.0"
+  }
+}
