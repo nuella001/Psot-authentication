@@ -2,7 +2,7 @@
 This is a nodejs server for authenticating users.
 
 ## Features
-Log In
+Log In <br /> 
 Sign Up
 ## Documentation
 ### Login
