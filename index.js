@@ -52,7 +52,8 @@ app.get('/', (req,res)=>{
 })
 
 app.post('/api/users', async (req, res) => {
-    let name = req.body.name;
+    try {
+        let name = req.body.name;
     let email = req.body.email;
     let password = req.body.password;
 
@@ -69,6 +70,10 @@ app.post('/api/users', async (req, res) => {
         name: newcustomer.name,
         email: newcustomer.email
     });
+    } catch (error) {
+        res.status(400).send(err)
+    }
+    
 
 })
 
@@ -79,7 +84,7 @@ app.get('/api/users', async (req, res) => {
 
     let user = await UserModel.findOne({ email: email });
 
-    if (!user) { res.status(401).send('user not found, sign up!') }
+    if (!user) { res.status(404).send('user not found, sign up!') }
 
     if (user.email == email && user.password == password) {
         res.status(200).send({
