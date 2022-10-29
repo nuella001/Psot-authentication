@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 const express = require('express');
+const cors = require('cors')
 const app = express();
+
+
+
 app.use(
     cors({
         origin:"*"
@@ -46,7 +50,7 @@ const UserModel = mongoose.model('User', userSchema);
 //   Sign up authorization
 app.get('/', (req,res)=>{
     res.send('Hello world')
-    
+
 })
 app.post('/api/users', async (req, res) => {
     let name = req.body.name;
