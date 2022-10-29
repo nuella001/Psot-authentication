@@ -71,7 +71,7 @@ app.post('/api/users', async (req, res) => {
         email: newcustomer.email
     });
     } catch (error) {
-        res.status(400).send(err)
+        res.status(400).send(error)
     }
     
 
