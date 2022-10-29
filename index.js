@@ -44,6 +44,10 @@ const UserModel = mongoose.model('User', userSchema);
 //   user.save();
 
 //   Sign up authorization
+app.get('/', (req,res)=>{
+    res.send('Hello world')
+    
+})
 app.post('/api/users', async (req, res) => {
     let name = req.body.name;
     let email = req.body.email;
