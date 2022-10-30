@@ -78,7 +78,7 @@ app.post('/api/users', async (req, res) => {
 })
 
 // Login authorization
-app.post('/api/users', async (req, res) => {
+app.post('/api/users/login', async (req, res) => {
     let email = req.body.email;
     let password = req.body.password
 
