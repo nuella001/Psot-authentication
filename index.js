@@ -78,9 +78,9 @@ app.post('/api/users', async (req, res) => {
 })
 
 // Login authorization
-app.get('/api/users', async (req, res) => {
-    let email = req.query.email;
-    let password = req.query.password
+app.post('/api/users', async (req, res) => {
+    let email = req.body.email;
+    let password = req.body.password
 
     let user = await UserModel.findOne({ email: email });
 
